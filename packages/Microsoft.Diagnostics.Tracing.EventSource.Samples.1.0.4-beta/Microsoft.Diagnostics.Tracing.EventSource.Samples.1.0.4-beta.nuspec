@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Diagnostics.Tracing.EventSource.Samples</id>
+    <version>1.0.4-beta</version>
+    <title>Microsoft EventSource Library Samples</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://go.microsoft.com/fwlink/?LinkID=279007</licenseUrl>
+    <projectUrl>http://go.microsoft.com/fwlink/?LinkID=317375</projectUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This package includes samples illustrating the use of the Microsoft.Diagnostics.Tracing.EventSource library.  Works best if you create a console app called 'DemoEventSource' and reference this package.</description>
+    <summary>Samples for the EventSource library.</summary>
+    <releaseNotes />
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <language />
+    <tags>Samples EventSource Microsoft ETW EventLog Channel</tags>
+    <dependencies>
+      <dependency id="Microsoft.Diagnostics.Tracing.EventSource" version="0.8.0" />
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,30 @@
+<!--
+***********************************************************************************************
+EventSource.targets
+
+WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and have
+          created a backup copy.  Incorrect changes to this file will make it
+          impossible to load or build your projects from the command-line or the IDE.
+
+Copyright (C) Microsoft Corporation. All rights reserved.
+***********************************************************************************************
+-->
+<Project InitialTargets="_InitialTarget" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- _InitialTarget -->
+  <Target Name="_InitialTarget">
+    <!-- Properties used by _CreateWin32RegDlls target -->
+    <PropertyGroup>
+      <FullOutputPath>$([System.IO.Path]::GetFullPath('.'))\$(OutputPath)</FullOutputPath>
+      <AssmName>$(FullOutputPath)$(AssemblyName)$(TargetExt)</AssmName>
+      <EtwManifests>$(OutputPath)$(AssemblyName).*.etw.man</EtwManifests>
+    </PropertyGroup>
+  </Target>
+
+
+  <Target Name="_CreateWin32RegDlls" Inputs="$(AssmName)" Outputs="$(EtwManifests)">
+    <Exec Command="&quot;$(MSBuildThisFileDirectory)eventRegister.exe&quot; -DumpRegDlls &quot;$(AssmName)&quot;" StandardOutputImportance="high" />
+  </Target>
+  
+  <Target Name="AfterBuild" DependsOnTargets="_CreateWin32RegDlls">
+  </Target>
+</Project>

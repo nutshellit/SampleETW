@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Diagnostics.Tracing.EventSource</id>
+    <version>1.0.4-beta</version>
+    <title>Microsoft EventSource Library</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://go.microsoft.com/fwlink/?LinkID=279007</licenseUrl>
+    <projectUrl>http://go.microsoft.com/fwlink/?LinkID=317375</projectUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>This package includes Microsoft.Diagnostics.Tracing.EventSource for firing ETW events from managed code. It enables defining a strongly typed specification of an ETW provider that can be called by managed code. The EventSource class is also included in the .NET Framework. This package provides a newer version that has more features. It is meant to be used as a stop gap until those features it contains are ported to (System.Diagnostics.Tracing.EventSource).
+
+For more details, have a look at http://msdn.microsoft.com/en-us/library/system.diagnostics.tracing.eventsource.aspx.
+
+New features:
+- ETW channel support
+- Support for static registration
+      
+Supported Platforms:
+- .NET Framework 4</description>
+    <summary>EventSource is a managed library for generating ETW events.</summary>
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <tags>EventSource Microsoft ETW EventLog Channel</tags>
+  </metadata>
+</package>
